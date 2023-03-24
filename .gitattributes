@@ -1,2 +1,51 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+print('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-')
+print('Você se identifica mais com o pré ou pós- tribulacionismo??')
+print('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-\n')
+print('Seja muito bem-vindo(a), vamos lá:\n')
+pre_tribulacionismo = {
+  'passara_pela_tribulacao': 'não',
+  'distincao_igreja_israel': 'sim',
+  'arrebatamento_qualquer_momento': 'sim'
+}
+
+pos_tribulacionismo = {
+  'passara_pela_tribulacao': 'sim',
+  'distincao_igreja_israel': 'nao',
+  'arrebatamento_qualquer_momento': 'nao'
+}
+
+quantidade_pre = 0
+quantidade_pos = 0
+
+resposta = input('Você entende que a igreja passará pela tribulação? (sim ou não?)\n')
+if resposta == 'não':
+  quantidade_pre += 1
+else:
+  quantidade_pos += 1
+
+resposta = input('Você distingue a igreja de Israel? (sim ou não?)\n')
+if resposta == 'sim':
+  quantidade_pre += 1
+else:
+  quantidade_pos += 1
+
+resposta = input('Você acredita que o arrebatamento pode ser a qualquer momento? (sim ou não?)\n')
+if resposta == 'não':
+  quantidade_pos += 1
+else:
+  quantidade_pre += 1
+
+if quantidade_pre > quantidade_pos:
+  print('Você tem mais afinidade com o pré-tribulacionismo\n')
+elif quantidade_pos > quantidade_pre:
+  print('Você tem mais afinidade com o pós-tribulacionismo\n')
+else:
+  print('Não foi possível determinar sua posição teológica\n')
+
+passagens_biblicas = input('Gostaria de passagens bíblicas para estudar?\n')
+
+if passagens_biblicas == 'sim':
+    print('Que alegria! Abaixo algumas passagens bíblicas:')
+    print('1 Tessalonicenses 4:16-17, João 16:33, Atos 14:22, Apocalipse 20 e 21, Mateus 24. Bons estudos!')
+else:
+    print('Tudo bem! Mas, não seja preguiçoso(a), volte para obter as passagens e estude. Até logo!')
